@@ -1,0 +1,45 @@
+npx create-next-app@latest teslo-shop
+    ty yes
+    esl yes
+    tail yes
+    src yes
+    app yes
+    alias no
+
+    npm run dev
+
+
+    copiar imagesn y productos en el proyecto
+
+    crear archivo config en src para agregar funetes
+    crear components en src para todo lo que nos sea paginas
+    app 
+        auth
+        shop
+    config
+        fonts.ts
+    components
+        cart
+        product
+        products
+        ui
+        index.ts
+    seed
+        seed.ts
+    interfaces
+    store
+
+    mover page princiapl para shop y crear layout.tsx
+
+(shop) la convierte en la ruta principal
+
+react icons
+npm install react-icons --save
+
+
+zustand => gestor de contenido UI STORE
+    npm install zustand
+
+
+clases condicionales de tailwind
+    npm i clsx
