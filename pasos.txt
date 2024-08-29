@@ -43,3 +43,7 @@ zustand => gestor de contenido UI STORE
 
 clases condicionales de tailwind
     npm i clsx
+
+swiperjs
+    https://swiperjs.com/
+    npm install swiper
