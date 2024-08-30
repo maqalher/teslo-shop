@@ -103,3 +103,6 @@ https://www.prisma.io/docs/orm/more/help-and-troubleshooting/help-articles/nextj
 
 
 export const revalidate = 60 // 60 segundos para guardar en caches solo 60 segundos
+
+test app
+    https://ngrok.com/
