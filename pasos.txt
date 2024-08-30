@@ -47,3 +47,56 @@ clases condicionales de tailwind
 swiperjs
     https://swiperjs.com/
     npm install swiper
+
+postgres en la nube
+https://neon.tech/
+
+docker docker-compose.yml
+
+version: '3.8'
+
+
+services:
+  postgres-db:
+    image: postgres:15.3
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
+    ports:
+      - 5433:5432
+
+.env
+DB_USER=
+DB_NAME=teslo-
+DB_PASSWORD=
+
+docker compose up -d
+
+ marco error docker stop a8cdc32cf67f 
+
+ prisma
+    npm install prisma --save-dev
+
+    npx prisma init --datasource-provider PostgreSQL
+
+    migracion prisma: 
+        npx prisma migrate dev --name ProductCategory 
+        npx prisma migrate dev --name ProductImage
+
+    genera cliente de prisma 
+        npx prisma generate
+
+npm i -D ts-node
+    "seed": "ts-node src/seed/seed-database.ts"
+ cd src/seed/
+  npx tsc --init
+
+    para ejecutar npm run seed
+
+Generar cliente manuales para prisma
+https://www.prisma.io/docs/orm/more/help-and-troubleshooting/help-articles/nextjs-prisma-client-dev-practices
+    src/lib/prisma.ts
