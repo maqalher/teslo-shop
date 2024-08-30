@@ -100,3 +100,6 @@ npm i -D ts-node
 Generar cliente manuales para prisma
 https://www.prisma.io/docs/orm/more/help-and-troubleshooting/help-articles/nextjs-prisma-client-dev-practices
     src/lib/prisma.ts
+
+
+export const revalidate = 60 // 60 segundos para guardar en caches solo 60 segundos

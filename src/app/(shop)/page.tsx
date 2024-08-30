@@ -1,9 +1,8 @@
+export const revalidate = 60 // 60 segundos
+
 import { getPaginatedProductsWithImages } from "@/actions";
 import { Pagination, ProductGrid, Title } from "@/components";
 import { redirect } from "next/navigation";
-// import { initialData } from "@/seed/seed";
-
-// const products = initialData.products
 
 interface Props{
   searchParams: {

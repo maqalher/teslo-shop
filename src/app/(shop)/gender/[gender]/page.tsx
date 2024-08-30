@@ -1,22 +1,37 @@
-import { ProductGrid, Title } from "@/components";
-import { Category } from "@/interfaces";
+export const revalidate = 60 // 60 segundos
+
+import { getPaginatedProductsWithImages } from "@/actions";
+import { Pagination, ProductGrid, Title } from "@/components";
 import { initialData } from "@/seed/seed";
-import { notFound } from "next/navigation";
+import { Gender } from "@prisma/client";
+import { redirect} from "next/navigation";
 
 const seedProducts = initialData.products
 
 interface Props {
   params: {
-    id: Category
+    gender: string
+  },
+  searchParams: {
+    page?: string;
   }
 }
 
-export default function CategoryPage({params}: Props) {
+export default async function CategoryPage({params,searchParams}: Props) {
 
-  const {id} = params
-  const products = seedProducts.filter(product => product.gender === id)
+  const {gender} = params
+  const page = searchParams.page ? parseInt(searchParams.page) : 1 
 
-  const label: Record<Category,string> = {
+  const {products,currentPage,totalPages} = await getPaginatedProductsWithImages({
+    page, 
+    gender: gender as Gender
+  })
+  
+  if(products.length === 0){
+    redirect(`/gender/${gender}`)
+  }
+
+  const label: Record<string,string> = {
     'men': 'para hombres',
     'women': 'para mujeres',
     'kid': 'para niños',
@@ -30,7 +45,7 @@ export default function CategoryPage({params}: Props) {
   return (
     <>
       <Title 
-        title={`Articulos de ${label[id]}`}
+        title={`Articulos de ${label[gender]}`}
         subtitle="Todos los productos"
         className="mb-2"
       />
@@ -39,6 +54,7 @@ export default function CategoryPage({params}: Props) {
         products={products}
       />
 
+      <Pagination totalPages={totalPages} />
     </>
   );
 }
