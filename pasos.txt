@@ -106,3 +106,28 @@ export const revalidate = 60 // 60 segundos para guardar en caches solo 60 segun
 
 test app
     https://ngrok.com/
+
+next auth
+    https://nextjs.org/learn/dashboard-app/adding-authentication
+    npm install next-auth@beta
+
+    openssl rand -base64 32 en git bash
+    AUTH_SECRET=your-secret-key .env
+
+    src/auth.config.ts
+
+    install zod
+    npm i zod
+
+    crear model User schema.prisma
+        npx prisma migrate dev --name user-role
+
+    npm i bcryptjs  para las pass
+    npm i --save-dev @types/bcryptjs
+
+    npm run seed
+
+    crear nextauth.d.ts en raiz para cambiar la interfaz de auth
+
+React Hook Form
+    npm install react-hook-form
