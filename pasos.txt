@@ -130,4 +130,19 @@ next auth
     crear nextauth.d.ts en raiz para cambiar la interfaz de auth
 
 React Hook Form
+https://react-hook-form.com/get-started
     npm install react-hook-form
+
+
+migracion de los paises
+npx prisma migrate dev -n country
+ npm run seed de los paises
+
+migracion de las userAddress
+ npx prisma migrate dev -n user-address
+ npx prisma migrate dev -n city-useraddress
+
+migracion de Order, OrderItem, OrderAddress, 
+    npx prisma migrate dev -n order-address-item
+
+    npx prisma migrate dev -n ispaid-defualt
