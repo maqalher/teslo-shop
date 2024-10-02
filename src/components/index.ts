@@ -7,7 +7,11 @@ export * from './product/slideshow/ProductSlideshow'
 export * from './product/slideshow/ProductMobileSlideshow'
 export * from './product/stock-label/StockLabel'
 
-export * from './provider/Provider'
+export * from './paypal/PayPalButton'
+
+export * from './providers/Providers'
+
+export * from './orders/OrderStatus'
 
 export * from './products/product-grid/ProductGrid'
 export * from './products/product-grid/ProductGridItem'

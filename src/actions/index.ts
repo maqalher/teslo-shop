@@ -18,6 +18,9 @@ import {placeOrder} from './order/place-order'
 import {getOrderById} from './order/get-order-by-id'
 import {getOrdersByUser} from './order/get-orders-by-users'
 
+import {setTransactionId} from './payments/set-transaction-id'
+import {paypalCheckPayment} from './payments/paypal-check-payment'
+
 export { 
     getPaginatedProductsWithImages, 
     getProductBySlug, 
@@ -31,5 +34,7 @@ export {
     getUserAddress,
     placeOrder,
     getOrderById,
-    getOrdersByUser
+    getOrdersByUser,
+    setTransactionId,
+    paypalCheckPayment    
 }

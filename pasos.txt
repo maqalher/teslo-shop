@@ -146,3 +146,25 @@ migracion de Order, OrderItem, OrderAddress,
     npx prisma migrate dev -n order-address-item
 
     npx prisma migrate dev -n ispaid-defualt
+
+    npx prisma migrate dev -n transaction-id
+
+crear app en paypal
+
+@paypal/react-paypal-js
+    npm i @paypal/react-paypal-js
+
+    agregar en Providers
+        
+        PayPalScriptProvider options={{ clientId: "test" }}>
+        <SessionProvider>
+            {children}
+        </SessionProvider>
+        </PayPalScriptProvider>
+
+        Paypal URLs de verificación
+    # POST
+PAYPAL_OAUTH_URL=https://api-m.sandbox.paypal.com/v1/oauth2/token
+
+#GET
+PAYPAL_ORDERS_URL=https://api.sandbox.paypal.com/v2/checkout/orders
