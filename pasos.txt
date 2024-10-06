@@ -168,3 +168,8 @@ PAYPAL_OAUTH_URL=https://api-m.sandbox.paypal.com/v1/oauth2/token
 
 #GET
 PAYPAL_ORDERS_URL=https://api.sandbox.paypal.com/v2/checkout/orders
+
+para subir imagenes
+https://cloudinary.com/
+    npm i cloudinary
+
