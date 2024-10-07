@@ -172,4 +172,15 @@ PAYPAL_ORDERS_URL=https://api.sandbox.paypal.com/v2/checkout/orders
 para subir imagenes
 https://cloudinary.com/
     npm i cloudinary
+    
+Desplegar 
+    npm run build
 
+
+    https://vercel.com/maqalhers-projects/~/stores
+    Prstreges create
+        teslo-db create
+
+        copiar en env psql "postgres://default:************@ep-empty-lake-a4uc3orv.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require"
+        npx prisma migrate deploy
+        npm run seed

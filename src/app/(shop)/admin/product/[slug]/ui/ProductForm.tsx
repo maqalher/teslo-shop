@@ -9,8 +9,8 @@ import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 
 interface Props {
-  product: Partial<Product> & {ProductImage: ProductWithImage[]};
-  categories: Category[]
+  product: Partial<Product> & { ProductImage?: ProductWithImage[] };
+  categories: Category[];
 }
 
 const sizes = ["XS", "S", "M", "L", "XL", "XXL"];
